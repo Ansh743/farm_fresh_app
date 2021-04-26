@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
+import './widgets/SignInPage.dart';
 
 void main() => runApp(HomeScreen());
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SignInPage(),
+    );
   }
 }
 
 class HomePage extends StatefulWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello'),
-        ),
-      ),
-    );
-  }
-
   @override
   State<StatefulWidget> createState() {
     return _HomePageState();
@@ -29,9 +22,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hello'),
+      ),
     );
   }
 }
