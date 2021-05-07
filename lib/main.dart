@@ -1,3 +1,4 @@
+import 'package:farm_fresh/widgets/SignUpPage.dart';
 import 'package:flutter/material.dart';
 import './widgets/SignInPage.dart';
 
@@ -8,7 +9,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      home: SignUpPage(),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
     );
   }
 }
